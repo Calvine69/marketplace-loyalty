@@ -1,44 +1,19 @@
-import 'package:equatable/equatable.dart';
-
-class ProductModel extends Equatable {
+class Review {
   final String id;
-  final String storeId;
-  final String name;
-  final String description;
-  final String imageUrl;
-  final double price;
+  final String productId;
+  final String username;
+  final String avatarInitial;
+  final double rating;
+  final String comment;
+  final DateTime date;
 
-  const ProductModel({
+  Review({
     required this.id,
-    required this.storeId,
-    required this.name,
-    required this.description,
-    required this.imageUrl,
-    required this.price,
+    required this.productId,
+    required this.username,
+    required this.avatarInitial,
+    required this.rating,
+    required this.comment,
+    required this.date,
   });
-
-  @override
-  List<Object> get props => [id];
-
-  Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'storeId': storeId,
-      'name': name,
-      'description': description,
-      'imageUrl': imageUrl,
-      'price': price,
-    };
-  }
-
-  factory ProductModel.fromJson(Map<String, dynamic> json) {
-    return ProductModel(
-      id: json['id'],
-      storeId: json['storeId'],
-      name: json['name'],
-      description: json['description'],
-      imageUrl: json['imageUrl'],
-      price: json['price'],
-    );
-  }
 }
