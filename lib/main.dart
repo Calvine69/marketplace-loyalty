@@ -12,9 +12,9 @@ import 'package:project_uts/features/wallet/logic/wallet_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  await initializeDateFormatting('id_ID', null); 
-  
+
+  await initializeDateFormatting('id_ID', null);
+
   runApp(const MyApp());
 }
 
@@ -33,26 +33,28 @@ class MyApp extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => AuthBloc(
-              authRepository: context.read<LocalAuthRepository>(),
-            )..add(CheckAuthStatus()),
+            create: (context) =>
+                AuthBloc(authRepository: context.read<LocalAuthRepository>())
+                  ..add(CheckAuthStatus()),
           ),
           BlocProvider(
-            create: (context) => WalletBloc(
-              walletRepository: context.read<WalletRepository>(),
-            ),
+            create: (context) =>
+                WalletBloc(walletRepository: context.read<WalletRepository>()),
           ),
           BlocProvider(
-            create: (context) => CartBloc(
-              cartRepository: context.read<CartRepository>(),
-            ),
+            create: (context) =>
+                CartBloc(cartRepository: context.read<CartRepository>()),
           ),
         ],
         child: BlocListener<AuthBloc, AuthState>(
           listener: (context, state) {
             if (state is AuthSuccess) {
-              context.read<WalletBloc>().add(LoadWallet(userEmail: state.user.email));
-              context.read<CartBloc>().add(LoadCart(userEmail: state.user.email));
+              context.read<WalletBloc>().add(
+                LoadWallet(userEmail: state.user.email),
+              );
+              context.read<CartBloc>().add(
+                LoadCart(userEmail: state.user.email),
+              );
             } else if (state is AuthLoggedOut) {
               context.read<WalletBloc>().add(ResetWallet());
               context.read<CartBloc>().add(ClearCart());
@@ -81,7 +83,9 @@ class MyApp extends StatelessWidget {
               cardTheme: CardThemeData(
                 color: Colors.white,
                 elevation: 2,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
               ),
               inputDecorationTheme: InputDecorationTheme(
                 filled: true,
@@ -96,7 +100,10 @@ class MyApp extends StatelessWidget {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
-                  borderSide: BorderSide(color: Colors.deepPurple.shade300, width: 2),
+                  borderSide: BorderSide(
+                    color: Colors.deepPurple.shade300,
+                    width: 2,
+                  ),
                 ),
                 hintStyle: TextStyle(color: Colors.deepPurple.shade300),
                 labelStyle: TextStyle(color: Colors.deepPurple.shade400),
@@ -111,11 +118,9 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               textButtonTheme: TextButtonThemeData(
-                style: TextButton.styleFrom(
-                  foregroundColor: Colors.deepPurple,
-                ),
+                style: TextButton.styleFrom(foregroundColor: Colors.deepPurple),
               ),
-                floatingActionButtonTheme: FloatingActionButtonThemeData(
+              floatingActionButtonTheme: FloatingActionButtonThemeData(
                 backgroundColor: Colors.deepPurpleAccent,
                 foregroundColor: Colors.white,
               ),
