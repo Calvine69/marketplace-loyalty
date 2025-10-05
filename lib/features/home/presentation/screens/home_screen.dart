@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:marketplace2/features/auth/logic/auth_bloc.dart';
-import 'package:marketplace2/features/cart/logic/cart_bloc.dart';
+import 'package:project_uts/features/auth/logic/auth_bloc.dart';
+import 'package:project_uts/features/cart/logic/cart_bloc.dart';
 
 class AdBannerModel {
   final String title;

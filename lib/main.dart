@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:marketplace2/app/routes/app_router.dart';
-import 'package:marketplace2/features/auth/data/repositories/local_auth_repository.dart';
-import 'package:marketplace2/features/auth/logic/auth_bloc.dart';
-import 'package:marketplace2/features/cart/data/repositories/cart_repository.dart';
-import 'package:marketplace2/features/cart/logic/cart_bloc.dart';
-import 'package:marketplace2/features/history/data/repositories/history_repository.dart';
-import 'package:marketplace2/features/wallet/data/repositories/wallet_repository.dart';
-import 'package:marketplace2/features/wallet/logic/wallet_bloc.dart';
+import 'package:project_uts/app/routes/app_router.dart';
+import 'package:project_uts/features/auth/data/repositories/local_auth_repository.dart';
+import 'package:project_uts/features/auth/logic/auth_bloc.dart';
+import 'package:project_uts/features/cart/data/repositories/cart_repository.dart';
+import 'package:project_uts/features/cart/logic/cart_bloc.dart';
+import 'package:project_uts/features/history/data/repositories/history_repository.dart';
+import 'package:project_uts/features/wallet/data/repositories/wallet_repository.dart';
+import 'package:project_uts/features/wallet/logic/wallet_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
