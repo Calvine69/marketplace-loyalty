@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:marketplace2/core/utils/formatter.dart';
-import 'package:marketplace2/features/cart/logic/cart_bloc.dart';
-import 'package:marketplace2/features/store/data/models/product_model.dart';
-import 'package:marketplace2/features/store/data/models/store_model.dart';
-import 'package:marketplace2/features/store/data/repositories/mock_store_repository.dart';
+import 'package:project_uts/core/utils/formatter.dart';
+import 'package:project_uts/features/cart/logic/cart_bloc.dart';
+import 'package:project_uts/features/store/data/models/product_model.dart';
+import 'package:project_uts/features/store/data/models/store_model.dart';
+import 'package:project_uts/features/store/data/repositories/mock_store_repository.dart';
 import '../widgets/review_widgets.dart';
 import '../../domain/services/review_service.dart';
 import '../../data/models/review_model.dart';
-import 'package:marketplace2/features/home/domain/services/user_stats_service.dart';
-import 'package:marketplace2/features/auth/logic/auth_bloc.dart';
+import 'package:project_uts/features/home/domain/services/user_stats_service.dart';
+import 'package:project_uts/features/auth/logic/auth_bloc.dart';
 
 class StorePageScreen extends StatefulWidget {
   final String storeId;
