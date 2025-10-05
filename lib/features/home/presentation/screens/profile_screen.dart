@@ -5,6 +5,10 @@ import 'package:project_uts/core/utils/formatter.dart';
 import 'package:project_uts/features/auth/logic/auth_bloc.dart';
 import 'package:project_uts/features/wallet/logic/wallet_bloc.dart';
 
+<<<<<<< HEAD
+// <-- 1. IMPORT WIDGET BARU ANDA
+=======
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
 import '../widgets/stats_card_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -13,12 +17,21 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
+      backgroundColor: Colors.grey.shade100, // abu-abu muda untuk background
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text('Profil Saya'),
+        backgroundColor: Colors.grey.shade200, // abu-abu untuk AppBar
+        foregroundColor: Colors.black87, // teks tetap jelas
+=======
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: const Text('Profil Saya'),
         backgroundColor: Colors.grey.shade200,
         foregroundColor: Colors.black87,
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
         elevation: 0,
       ),
       body: BlocBuilder<AuthBloc, AuthState>(
@@ -39,13 +52,21 @@ class ProfileScreen extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 50,
+<<<<<<< HEAD
+          backgroundColor: Colors.grey.shade300, // avatar abu-abu
+=======
           backgroundColor: Colors.grey.shade300,
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
           child: Text(
             authState.user.fullName.isNotEmpty ? authState.user.fullName[0].toUpperCase() : '?',
             style: const TextStyle(
               fontSize: 48,
               fontWeight: FontWeight.bold,
+<<<<<<< HEAD
+              color: Colors.black87, // teks gelap di abu-abu
+=======
               color: Colors.black87,
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
             ),
           ),
         ),
@@ -79,6 +100,10 @@ class ProfileScreen extends StatelessWidget {
         ),
         const SizedBox(height: 16),
 
+<<<<<<< HEAD
+        // <-- 2. TAMBAHKAN WIDGET KARTU STATISTIK DI SINI
+=======
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
         const StatsCardWidget(),
 
         Divider(color: Colors.grey.shade400),
@@ -90,7 +115,11 @@ class ProfileScreen extends StatelessWidget {
             context.read<AuthBloc>().add(LogoutButtonPressed());
           },
           style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
+            backgroundColor: Colors.grey.shade700, // abu-abu gelap
+=======
             backgroundColor: Colors.grey.shade700,
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
             padding: const EdgeInsets.symmetric(vertical: 12),
           ),
           child: const Text('Logout', style: TextStyle(color: Colors.white, fontSize: 16)),
@@ -130,7 +159,11 @@ class ProfileScreen extends StatelessWidget {
                 context.go('/login');
               },
               style: ElevatedButton.styleFrom(
+<<<<<<< HEAD
+                backgroundColor: Colors.grey.shade700, // abu-abu gelap
+=======
                 backgroundColor: Colors.grey.shade700,
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
               child: const Text('Login atau Daftar', style: TextStyle(color: Colors.white)),
@@ -140,4 +173,8 @@ class ProfileScreen extends StatelessWidget {
       ),
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 45f614e0d377412114a99233bfb3df065acd5187
