@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_uts/core/utils/formatter.dart';
-import 'package:project_uts/features/home/domain/services/user_stats_service.dart';
+import 'package:marketplace2/core/utils/formatter.dart';
+import 'package:marketplace2/features/home/domain/services/user_stats_service.dart';
 
 class StatsCardWidget extends StatelessWidget {
   const StatsCardWidget({super.key});
