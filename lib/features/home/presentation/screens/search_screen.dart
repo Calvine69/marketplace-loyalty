@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:marketplace2/features/store/data/models/store_model.dart';
-import 'package:marketplace2/features/store/data/repositories/mock_store_repository.dart';
+import 'package:project_uts/features/store/data/models/store_model.dart';
+import 'package:project_uts/features/store/data/repositories/mock_store_repository.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

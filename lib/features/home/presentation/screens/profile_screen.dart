@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:marketplace2/core/utils/formatter.dart';
-import 'package:marketplace2/features/auth/logic/auth_bloc.dart';
-import 'package:marketplace2/features/wallet/logic/wallet_bloc.dart';
+import 'package:project_uts/core/utils/formatter.dart';
+import 'package:project_uts/features/auth/logic/auth_bloc.dart';
+import 'package:project_uts/features/wallet/logic/wallet_bloc.dart';
 
 import '../widgets/stats_card_widget.dart';
 
